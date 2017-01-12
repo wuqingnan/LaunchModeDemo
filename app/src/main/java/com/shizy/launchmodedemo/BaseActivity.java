@@ -40,7 +40,8 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d("", "shizy---onCreate----");
-        Log.d("", "shizy---taskId: " + getTaskId() + "  ||| hashCode: " + hashCode());
+        setTitle(getClass().getSimpleName() + ": " + getTaskId());
+
         dumpTaskAffinity();
     }
 
@@ -48,7 +49,6 @@ public class BaseActivity extends AppCompatActivity {
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         Log.d("", "shizy---onNewIntent----");
-        Log.d("", "shizy---taskId: " + getTaskId() + "  ||| hashCode: " + hashCode());
         dumpTaskAffinity();
     }
 
